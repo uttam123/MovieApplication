@@ -1,0 +1,29 @@
+[
+    {
+        "Id": "e4f1d2e4-9a90-46a5-a9b4-29e3340bc5e5",
+        "Name": "Inception",
+        "Genre": "Sci-Fi",
+        "Actors": [ "Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page" ],
+        "ReleaseDate": "2010-07-16",
+        "PosterUrl": "https://m.media-amazon.com/images/I/51s+z4BlPUL._AC_SY679_.jpg",
+        "Description": "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea."
+    },
+    {
+        "Id": "8e9b7d4a-22f3-4a2b-a44f-eed4cbb7c45b",
+        "Name": "The Dark Knight",
+        "Genre": "Action",
+        "Actors": [ "Christian Bale", "Heath Ledger", "Aaron Eckhart" ],
+        "ReleaseDate": "2008-07-18",
+        "PosterUrl": "https://m.media-amazon.com/images/I/51zUbui+gbL._AC_SY679_.jpg",
+        "Description": "When the menace known as the Joker emerges, Batman must accept one of the greatest psychological and physical tests."
+    },
+    {
+        "Id": "2e41aa30-bd58-41c2-832d-58eaa8e2d3d1",
+        "Name": "Interstellar",
+        "Genre": "Adventure",
+        "Actors": [ "Matthew McConaughey", "Anne Hathaway", "Jessica Chastain" ],
+        "ReleaseDate": "2014-11-07",
+        "PosterUrl": "https://m.media-amazon.com/images/I/81o1p4Y4n2L._AC_SY679_.jpg",
+        "Description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
+    }
+]

@@ -12,7 +12,10 @@ namespace MovieApplication.Api.Repository
         {
             if (!File.Exists(FilePath)) return new List<Movie>();
             var json = await File.ReadAllTextAsync(FilePath);
-            return JsonSerializer.Deserialize<List<Movie>>(json) ?? new();
+            return JsonSerializer.Deserialize<List<Movie>>(json, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            }) ?? new List<Movie>();
         }
 
         private async Task WriteToFileAsync(List<Movie> movies)

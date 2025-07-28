@@ -1,0 +1,48 @@
+﻿@inject HttpClient Http
+
+<h3>Movie Library</h3>
+
+@if (movies == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <div class="row">
+        @foreach (var movie in movies)
+        {
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="@movie.PosterUrl" />
+                    <div class="card-body">
+                        <h5>@movie.Name</h5>
+                        <p><strong>Genre:</strong> @movie.Genre</p>
+                        <p><strong>Actors:</strong> @string.Join(", ", movie.Actors)</p>
+                        <p><strong>Release:</strong> @movie.ReleaseDate</p>
+                        <p>@movie.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    List<Movie>? movies;
+
+    protected override async Task OnInitializedAsync()
+    {
+        movies = await Http.GetFromJsonAsync<List<Movie>>("https://localhost:5001/api/movies");
+    }
+
+    public class Movie
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Genre { get; set; }
+        public List<string> Actors { get; set; }
+        public string ReleaseDate { get; set; }
+        public string PosterUrl { get; set; }
+        public string Description { get; set; }
+    }
+}
